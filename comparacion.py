@@ -4,7 +4,7 @@ import statistics
 import matplotlib.pyplot as plt
 
 
-# busqueda anidada O(n^2)
+# Busqueda anidada O(n^2)
 def busqueda_anidada(a, b):
     resultado = []
 
@@ -36,7 +36,7 @@ def busqueda_binaria(lista, valor):
     return False
 
 
-#ordenar B y buscar cada elemento usando busqueda binaria O(n log n)
+#Ordenar B y buscar cada elemento usando busqueda binaria O(n log n)
 def interseccion_binaria(a, b):
     b_ordenado = sorted(b)
     resultado = []
@@ -48,7 +48,7 @@ def interseccion_binaria(a, b):
     return resultado
 
 
-# usar un set O(n)
+# Usar un set O(n)
 def interseccion_hash(a, b):
     conjunto_b = set(b)
     resultado = []
@@ -60,7 +60,7 @@ def interseccion_hash(a, b):
     return resultado
 
 
-# Genero dos listas sin elementos en comun para que la interccipoin anidada a recorra completamente la segunda lista.
+# Genero dos listas sin elementos en comun para que la interacción anidada a recorra completamente la segunda lista.
 def generar_peor_caso(n):
     a = list(range(n))
     b = list(range(n, n * 2))
@@ -91,7 +91,7 @@ def medir_tiempo(funcion, a, b, repeticiones=7):
 def ejecutar_comparaciones():
     tamanios = [100, 1000, 10000]
 
-    # quito el 100000, porque tarda demasiado en ejecutarse y no es necesario para ver la tendencia de los algoritmos
+    # Se quita el 100000, porque tarda demasiado en ejecutarse y no es necesario para ver la tendencia de los algoritmos
 
     tiempos_anidada = []
     tiempos_binaria = []
@@ -170,7 +170,7 @@ def encontrar_n_asterisco(limite=5000, repeticiones=31):
             repeticiones
         )
 
-        # Si la binaria ya es mas rapida, buscamos en donde ocurre el cambio
+        # Si la binaria ya es mas rápida, buscamos en donde ocurre el cambio
         if tiempo_binaria < tiempo_anidada:
 
             inicio = n_anterior + 1
